@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barberos Elite Las Lomas | Barbería Premium en Monterrey</title>
+  <meta name="description" content="Barberos Elite Las Lomas — Cortes de cabello, barba y grooming de primera en Las Lomas, Monterrey. Reserva tu cita hoy." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            gold: {
+              300: '#f4d47a',
+              400: '#e8b84b',
+              500: '#c9973a',
+              600: '#a67c2e',
+            },
+            charcoal: {
+              800: '#1a1a1a',
+              900: '#0d0d0d',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .hero-bg {
+      background-image:
+        linear-gradient(to bottom, rgba(13,13,13,0.75) 0%, rgba(13,13,13,0.5) 50%, rgba(13,13,13,0.88) 100%),
+        url('images/fondo.jpg');
+      background-size: cover;
+      background-position: center 30%;
+    }
+    .gold-line::before {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 2px;
+      background: #c9973a;
+      margin-bottom: 16px;
+    }
+    .service-card:hover .service-icon {
+      color: #c9973a;
+      transform: scale(1.1);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; animation: none !important; }
+    }
+  </style>
+</head>
+<body class="bg-charcoal-900 text-white font-sans antialiased">
+
+  <!-- NAV -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-charcoal-900/90 backdrop-blur-sm border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#inicio" class="flex items-center cursor-pointer">
+        <img src="images/logo.jpg" alt="Barberos Elite" class="h-10 w-auto object-contain" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-white/70">
+        <a href="#servicios" class="hover:text-gold-400 transition-colors duration-200 cursor-pointer">Servicios</a>
+        <a href="#nosotros" class="hover:text-gold-400 transition-colors duration-200 cursor-pointer">Nosotros</a>
+        <a href="#galeria" class="hover:text-gold-400 transition-colors duration-200 cursor-pointer">Galería</a>
+        <a href="#ubicacion" class="hover:text-gold-400 transition-colors duration-200 cursor-pointer">Ubicación</a>
+      </nav>
+      <a href="#reservar" class="bg-gold-500 hover:bg-gold-400 text-charcoal-900 font-semibold text-sm px-5 py-2.5 rounded transition-colors duration-200 cursor-pointer">
+        Reservar cita
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero-bg min-h-screen flex items-center justify-center text-center px-6 pt-16">
+    <div class="max-w-3xl mx-auto">
+      <p class="text-gold-500 font-medium tracking-[0.3em] text-xs uppercase mb-6">Las Lomas · Monterrey, NL</p>
+      <h1 class="font-serif font-900 text-5xl md:text-7xl leading-tight mb-6">
+        Barberos<br /><span class="text-gold-400">Elite</span>
+      </h1>
+      <p class="text-white/70 text-lg md:text-xl font-light leading-relaxed max-w-xl mx-auto mb-10">
+        Cortes de cabello, perfilado de barba y grooming premium. El estilo que mereces, en manos de expertos.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#reservar" class="bg-gold-500 hover:bg-gold-400 text-charcoal-900 font-semibold px-8 py-4 rounded transition-colors duration-200 cursor-pointer text-base">
+          Reservar mi cita
+        </a>
+        <a href="#servicios" class="border border-white/30 hover:border-gold-500 text-white hover:text-gold-400 font-medium px-8 py-4 rounded transition-colors duration-200 cursor-pointer text-base">
+          Ver servicios
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="bg-gold-500 py-5">
+    <div class="max-w-4xl mx-auto px-6 grid grid-cols-3 gap-4 text-center">
+      <div>
+        <p class="font-serif font-700 text-2xl text-charcoal-900">5+</p>
+        <p class="text-charcoal-800 text-xs font-medium mt-0.5">Años de experiencia</p>
+      </div>
+      <div class="border-x border-charcoal-800/20">
+        <p class="font-serif font-700 text-2xl text-charcoal-900">1000+</p>
+        <p class="text-charcoal-800 text-xs font-medium mt-0.5">Clientes satisfechos</p>
+      </div>
+      <div>
+        <p class="font-serif font-700 text-2xl text-charcoal-900">★ 5.0</p>
+        <p class="text-charcoal-800 text-xs font-medium mt-0.5">Calificación en Google</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="servicios" class="py-24 px-6 bg-charcoal-900">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-14">
+        <p class="text-gold-500 text-xs tracking-[0.3em] uppercase font-medium mb-3">Lo que ofrecemos</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-700">Nuestros Servicios</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Service cards -->
+        <div class="service-card group bg-white/5 hover:bg-white/8 border border-white/10 hover:border-gold-500/40 rounded-xl p-8 transition-all duration-300 cursor-default">
+          <div class="service-icon transition-all duration-300 text-white/60 mb-5">
+            <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl font-600 mb-2">Corte de Cabello</h3>
+          <p class="text-white/55 text-sm leading-relaxed">Cortes clásicos, modernos y de tendencia adaptados a tu estilo y tipo de cabello.</p>
+          <p class="text-gold-500 font-semibold mt-5 text-sm">Desde $150</p>
+        </div>
+
+        <div class="service-card group bg-white/5 hover:bg-white/8 border border-white/10 hover:border-gold-500/40 rounded-xl p-8 transition-all duration-300 cursor-default">
+          <div class="service-icon transition-all duration-300 text-white/60 mb-5">
+            <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl font-600 mb-2">Arreglo de Barba</h3>
+          <p class="text-white/55 text-sm leading-relaxed">Perfilado, delineado y afeitado con navajas de precisión. Tratamiento con toalla caliente.</p>
+          <p class="text-gold-500 font-semibold mt-5 text-sm">Desde $120</p>
+        </div>
+
+        <div class="service-card group bg-white/5 hover:bg-white/8 border border-white/10 hover:border-gold-500/40 rounded-xl p-8 transition-all duration-300 cursor-default">
+          <div class="service-icon transition-all duration-300 text-white/60 mb-5">
+            <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl font-600 mb-2">Corte + Barba</h3>
+          <p class="text-white/55 text-sm leading-relaxed">El combo completo. Corte de cabello y arreglo de barba en una sola sesión a precio especial.</p>
+          <p class="text-gold-500 font-semibold mt-5 text-sm">Desde $250</p>
+        </div>
+
+        <div class="service-card group bg-white/5 hover:bg-white/8 border border-white/10 hover:border-gold-500/40 rounded-xl p-8 transition-all duration-300 cursor-default">
+          <div class="service-icon transition-all duration-300 text-white/60 mb-5">
+            <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl font-600 mb-2">Cejas</h3>
+          <p class="text-white/55 text-sm leading-relaxed">Definición y limpieza de cejas para un acabado profesional y natural.</p>
+          <p class="text-gold-500 font-semibold mt-5 text-sm">Desde $80</p>
+        </div>
+
+        <div class="service-card group bg-white/5 hover:bg-white/8 border border-white/10 hover:border-gold-500/40 rounded-xl p-8 transition-all duration-300 cursor-default">
+          <div class="service-icon transition-all duration-300 text-white/60 mb-5">
+            <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl font-600 mb-2">Tratamiento Capilar</h3>
+          <p class="text-white/55 text-sm leading-relaxed">Hidratación, nutrición y cuidado del cuero cabelludo con productos premium.</p>
+          <p class="text-gold-500 font-semibold mt-5 text-sm">Desde $200</p>
+        </div>
+
+        <div class="service-card group bg-white/5 hover:bg-white/8 border border-white/10 hover:border-gold-500/40 rounded-xl p-8 transition-all duration-300 cursor-default">
+          <div class="service-icon transition-all duration-300 text-white/60 mb-5">
+            <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl font-600 mb-2">Servicio Express</h3>
+          <p class="text-white/55 text-sm leading-relaxed">Cuando el tiempo apremia. Corte rápido y preciso sin sacrificar calidad.</p>
+          <p class="text-gold-500 font-semibold mt-5 text-sm">Desde $100</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="nosotros" class="py-24 px-6 bg-white/[0.03]">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <div class="rounded-2xl overflow-hidden aspect-[4/5] bg-white/5">
+          <img
+            src="images/fondo.jpg"
+            alt="Interior de Barberos Elite Las Lomas"
+            class="w-full h-full object-cover opacity-90"
+            loading="lazy"
+          />
+        </div>
+      </div>
+      <div>
+        <p class="text-gold-500 text-xs tracking-[0.3em] uppercase font-medium mb-4">Nuestra historia</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-700 leading-tight mb-6">
+          Más que una<br />barbería, una<br /><span class="text-gold-400">experiencia</span>
+        </h2>
+        <p class="text-white/60 leading-relaxed mb-4">
+          En <strong class="text-white">Barberos Elite Las Lomas</strong> combinamos técnicas tradicionales con tendencias actuales para ofrecerte un servicio de primer nivel. Cada corte es una obra de arte.
+        </p>
+        <p class="text-white/60 leading-relaxed mb-8">
+          Nuestro equipo de barberos certificados está comprometido con tu imagen. Utilizamos productos de alta calidad y herramientas profesionales para garantizar el mejor resultado.
+        </p>
+        <ul class="space-y-3">
+          <li class="flex items-center gap-3 text-sm text-white/70">
+            <svg class="w-5 h-5 text-gold-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Barberos certificados y con experiencia
+          </li>
+          <li class="flex items-center gap-3 text-sm text-white/70">
+            <svg class="w-5 h-5 text-gold-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Ambiente cómodo y moderno
+          </li>
+          <li class="flex items-center gap-3 text-sm text-white/70">
+            <svg class="w-5 h-5 text-gold-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Productos premium importados
+          </li>
+          <li class="flex items-center gap-3 text-sm text-white/70">
+            <svg class="w-5 h-5 text-gold-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Atención personalizada en cada visita
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="galeria" class="py-24 px-6 bg-charcoal-900">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-14">
+        <p class="text-gold-500 text-xs tracking-[0.3em] uppercase font-medium mb-3">Nuestro trabajo</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-700">Galería</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+        <div class="rounded-xl overflow-hidden aspect-square bg-white/5">
+          <img src="images/corte1.jpg" alt="Corte de cabello" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+        </div>
+        <div class="rounded-xl overflow-hidden aspect-square bg-white/5">
+          <img src="images/corte2.jpg" alt="Arreglo de barba" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+        </div>
+        <div class="rounded-xl overflow-hidden aspect-square bg-white/5">
+          <img src="images/corte3.jpg" alt="Corte fade" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+        </div>
+        <div class="rounded-xl overflow-hidden aspect-square bg-white/5">
+          <img src="images/corte4.jpg" alt="Estilo moderno" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+        </div>
+        <div class="rounded-xl overflow-hidden aspect-square bg-white/5">
+          <img src="images/corte5.jpg" alt="Grooming premium" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+        </div>
+        <div class="rounded-xl overflow-hidden aspect-square bg-white/5">
+          <img src="images/corte6.jpg" alt="Corte premium" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="py-24 px-6 bg-white/[0.03]">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-14">
+        <p class="text-gold-500 text-xs tracking-[0.3em] uppercase font-medium mb-3">Lo que dicen</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-700">Reseñas</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="bg-white/5 border border-white/10 rounded-xl p-8">
+          <div class="flex gap-1 mb-4" aria-label="5 estrellas">
+            <svg class="w-4 h-4 text-gold-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-4 h-4 text-gold-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-4 h-4 text-gold-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-4 h-4 text-gold-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-4 h-4 text-gold-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="text-white/65 text-sm leading-relaxed mb-6">"El mejor lugar para cortarse el cabello en Las Lomas. Ambiente increíble, barberos muy profesionales y el resultado siempre es perfecto."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-gold-500/20 flex items-center justify-center text-gold-400 font-semibold text-sm">CR</div>
+            <div>
+              <p class="text-sm font-medium">Carlos R.</p>
+              <p class="text-white/40 text-xs">Cliente frecuente</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 rounded-xl p-8">
+          <div class="flex gap-1 mb-4" aria-label="5 estrellas">
+            <svg class="w-4 h-4 text-gold-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-4 h-4 text-gold-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-4 h-4 text-gold-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-4 h-4 text-gold-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-4 h-4 text-gold-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="text-white/65 text-sm leading-relaxed mb-6">"Vine por primera vez y me hicieron exactamente lo que pedí. La atención fue de 10, el lugar está muy limpio y el precio es muy justo."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-gold-500/20 flex items-center justify-center text-gold-400 font-semibold text-sm">ML</div>
+            <div>
+              <p class="text-sm font-medium">Miguel L.</p>
+              <p class="text-white/40 text-xs">Google Maps</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 rounded-xl p-8">
+          <div class="flex gap-1 mb-4" aria-label="5 estrellas">
+            <svg class="w-4 h-4 text-gold-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-4 h-4 text-gold-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-4 h-4 text-gold-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-4 h-4 text-gold-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-4 h-4 text-gold-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="text-white/65 text-sm leading-relaxed mb-6">"Llevo 2 años viniendo y nunca me ha fallado. Siempre salgo satisfecho. El arreglo de barba es especialmente bueno, lo recomiendo al 100%."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-gold-500/20 flex items-center justify-center text-gold-400 font-semibold text-sm">JA</div>
+            <div>
+              <p class="text-sm font-medium">Jorge A.</p>
+              <p class="text-white/40 text-xs">Cliente desde 2022</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING CTA -->
+  <section id="reservar" class="py-24 px-6 bg-charcoal-900">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="text-gold-500 text-xs tracking-[0.3em] uppercase font-medium mb-4">Agenda tu visita</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-700 mb-4">¿Listo para el cambio?</h2>
+      <p class="text-white/55 mb-10 leading-relaxed">Reserva tu cita fácilmente por WhatsApp. Te atendemos de lunes a sábado.</p>
+      <a
+        href="https://wa.me/528127474765?text=Hola,%20quisiera%20reservar%20una%20cita%20en%20Barberos%20Elite%20Las%20Lomas"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#22c55e] text-white font-semibold px-8 py-4 rounded transition-colors duration-200 cursor-pointer text-base"
+        aria-label="Reservar cita por WhatsApp"
+      >
+        <!-- WhatsApp icon -->
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Reservar por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- LOCATION & HOURS -->
+  <section id="ubicacion" class="py-24 px-6 bg-white/[0.03]">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+      <div>
+        <p class="text-gold-500 text-xs tracking-[0.3em] uppercase font-medium mb-4">Dónde encontrarnos</p>
+        <h2 class="font-serif text-3xl font-700 mb-8">Ubicación y Horarios</h2>
+
+        <div class="space-y-6 mb-10">
+          <div class="flex gap-4">
+            <div class="w-10 h-10 rounded-lg bg-gold-500/10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-gold-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <p class="font-medium text-sm mb-1">Dirección</p>
+              <p class="text-white/55 text-sm leading-relaxed">Las Lomas, Monterrey, Nuevo León<br />México</p>
+              <a href="https://maps.app.goo.gl/8WbytZ6f1Bf7XtUw6" target="_blank" rel="noopener noreferrer" class="text-gold-400 text-xs hover:text-gold-300 transition-colors duration-200 cursor-pointer mt-1 inline-block">Ver en Google Maps →</a>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="w-10 h-10 rounded-lg bg-gold-500/10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-gold-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <div>
+              <p class="font-medium text-sm mb-2">Horarios</p>
+              <div class="text-white/55 text-sm space-y-1">
+                <div class="flex justify-between gap-8">
+                  <span>Lunes – Viernes</span>
+                  <span>9:00 – 21:00</span>
+                </div>
+                <div class="flex justify-between gap-8">
+                  <span>Sábado</span>
+                  <span>9:00 – 20:00</span>
+                </div>
+                <div class="flex justify-between gap-8">
+                  <span>Domingo</span>
+                  <span>11:00 – 16:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="w-10 h-10 rounded-lg bg-gold-500/10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-gold-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.17h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="font-medium text-sm mb-1">Teléfono / WhatsApp</p>
+              <a href="tel:+528127474765" class="text-gold-400 hover:text-gold-300 transition-colors duration-200 cursor-pointer text-sm">81 2747 4765</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Map embed -->
+      <div class="rounded-2xl overflow-hidden h-80 md:h-full min-h-72 bg-white/5 border border-white/10">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.3!2d-100.4330923!3d25.7715544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86629100589e1803%3A0x891efa76b72347e7!2sBarberos+Elite+Las+Lomas!5e0!3m2!1ses!2smx!4v1"
+          width="100%"
+          height="100%"
+          style="border:0; min-height: 288px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación de Barberos Elite Las Lomas en Google Maps"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-charcoal-900 border-t border-white/10 py-10 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/40">
+      <div class="flex items-center gap-2">
+        <svg class="w-5 h-5 text-gold-500/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/>
+          <line x1="20" y1="4" x2="8.12" y2="15.88"/>
+          <line x1="14.47" y1="14.48" x2="20" y2="20"/>
+          <line x1="8.12" y1="8.12" x2="12" y2="12"/>
+        </svg>
+        <span class="text-white/60 font-medium">Barberos Elite Las Lomas</span>
+      </div>
+      <p>&copy; 2024 Barberos Elite Las Lomas. Todos los derechos reservados.</p>
+      <div class="flex items-center gap-5">
+        <a href="https://maps.app.goo.gl/8WbytZ6f1Bf7XtUw6" target="_blank" rel="noopener noreferrer" class="hover:text-gold-400 transition-colors duration-200 cursor-pointer">
+          Ver en Google Maps
+        </a>
+        <a href="https://www.facebook.com/share/1BrNoA53vu/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="hover:text-gold-400 transition-colors duration-200 cursor-pointer flex items-center gap-1.5" aria-label="Facebook de Barberos Elite">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Facebook
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
